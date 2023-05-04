@@ -15,7 +15,7 @@
     "jsx": "preserve",
     "incremental": true,
     "paths": {
-      "/*devagram2-node-nextjsdevagram2/*dextjsndefinedndefinedndefineddevagram-nuevagram2-node-nextjsndefinedodendefinednodejs-nextjsjs-nextjs": ["./*"]
+      "/*devagram2-node-nextjs": ["./*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
