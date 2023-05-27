@@ -25,14 +25,14 @@ const uploadImagemCosmic = async(req : any) => {
 
     if(req?.file?.originalname){
         const media_object = {
-            originalName: req.file.originalname,
+            originalname: req.file.originalname,
             buffer : req.file.buffer
         };
         console.log(media_object);
         if(req.url && req.url.includes('publicacao')){
             return await bucketPublicacoes.addMedia({media : media_object});
         }else{
-            return await bucketAvatares.addMedia({media_object});
+            return await bucketAvatares.addMedia({media : media_object});
         }
     }
 }
