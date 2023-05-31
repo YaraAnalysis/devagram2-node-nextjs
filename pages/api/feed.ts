@@ -8,6 +8,7 @@ import { PublicacaoModel } from "../../models/PublicacaoModel";
 const feedEndpoint = async (req : NextApiRequest, res : NextApiResponse<RespostaPadraoMsg | any>) =>{
     try{
         if(req.method === 'GET'){
+            console.log(req.query)
             // receber uma info do id do usuario do qual quero buscar o feed
             if(req?.query?.userId){
                 // agora que tenho o id do usuario, 
