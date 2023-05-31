@@ -9,7 +9,7 @@ const {
 
 const Cosmic = cosmicjs();
 const bucketAvatares = Cosmic.bucket({
-    slug:BUCKET_AVATARES,
+    slug: BUCKET_AVATARES,
     write_key: CHAVE_GRAVACAO_AVATARES
 });
 
@@ -22,8 +22,14 @@ const storage = multer.memoryStorage();
 const upload = multer({storage : storage});
 
 const uploadImagemCosmic = async(req : any) => {
-
     if(req?.file?.originalname){
+
+        if(!req.file.originalname.includes('.png') &&
+            !req.file.originalname.includes('.jpg') && 
+            !req.file.originalname.includes('.jpeg')){
+                throw new Error('Extensao da imagem invalida');
+        } 
+
         const media_object = {
             originalname: req.file.originalname,
             buffer : req.file.buffer

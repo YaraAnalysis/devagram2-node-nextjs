@@ -51,5 +51,4 @@ export const config = {
         bodyParser : false
     }
 }
-   
     export default conectarMongoDB(handler);
