@@ -8,18 +8,19 @@ const pesquisaEndpoint
     = async (req : NextApiRequest, res : NextApiResponse<RespostaPadraoMsg | any[]>) => {
     try{
         if(req.method === 'GET'){
-
             const {filtro} = req.query;
-            console.log(req);
+            console.log(req.query);
             //buscar no banco por nome com o filtro
             // ou buscar no banco pelo email com o filtro
             if(!filtro || filtro.length < 2){
-                console.log(filtro)
+                // console.log(filtro)
                 return res.status(400).json({erro : 'Favor informar pelo menos 2 caracteres para a busca.'});
             }
 
             const usuariosEncontrados = await UsuarioModel.find({
-                nome : {$regex : filtro, $options: 'i'}
+                $or: [{ nome : {$regex : filtro, $options: 'i'}},
+                    // { email : {$regex : filtro, $options: 'i'}}
+                ]
             });
 
             return res.status(200).json(usuariosEncontrados);

@@ -10,10 +10,10 @@ const feedEndpoint = async (req : NextApiRequest, res : NextApiResponse<Resposta
         if(req.method === 'GET'){
             console.log(req.query)
             // receber uma info do id do usuario do qual quero buscar o feed
-            if(req?.query?.userId){
+            if(req?.query?.id){
                 // agora que tenho o id do usuario, 
                 // como eu valido se é um usuario valido
-                const usuario = await UsuarioModel.findById(req?.query?.userId);
+                const usuario = await UsuarioModel.findById(req?.query?.id);
                 if(!usuario){
                     return res.status(400).json({erro : 'Usuário não encontrado.'});
                 }
