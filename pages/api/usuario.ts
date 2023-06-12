@@ -51,6 +51,7 @@ const handler = nc()
             const {userId} = req?.query;
             // buscar todos os dados do usuário
             const usuario = await UsuarioModel.findById(userId);
+            console.log('usuario', usuario);
             usuario.senha = null;
             return res.status(200).json(usuario);
         }catch(e){
