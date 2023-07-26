@@ -15,7 +15,12 @@ Moment 2.29.4
 
 ## Configuração do ambiente de desenvolvimento
 Clonar o repositório git clone <url_git>
+
 Fazer uma cópia do arquivo .env.example e renomear o novo arquivo para .env.local
+
 Configurar as variáveis de ambiente no arquivo .env.local
+
 Instalar as dependências do projeto npm i
+
 Executar o comando npm run dev no terminal para subir a aplicação
+
