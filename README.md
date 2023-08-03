@@ -5,13 +5,13 @@ Projeto réplica do Instagram, desenvolvido em Node.js e Typescript para estudo 
 [Devagram](http://devagram2-node-nextjs-7i96og4gn-yaraanalysis.vercel.app)
 
 ## Tecnologias Utilizadas
-Node 18.16.0
-Next 13.3.4
-Mongoose 7.1.0
-CosmicJS 4.3.7
-JsonWebToken 9.0.0
-Multer 1.4.5-lts.1
-Moment 2.29.4
+Node 18.16.0 <br>
+Next 13.3.4 <br>
+Mongoose 7.1.0 <br>
+CosmicJS 4.3.7 <br>
+JsonWebToken 9.0.0 <br>
+Multer 1.4.5-lts.1 <br>
+Moment 2.29.4 <br>
 
 ## Configuração do ambiente de desenvolvimento
 Clonar o repositório ```git clone <url_git>``` <br>
