@@ -47,6 +47,7 @@ const handler = nc()
         return res.status(200).json({msg : 'Usuário cadastrado com sucesso.'});
 });
 
+// mudar a configuração padrão do next para não exportar json nesta api.
 export const config = {
     api: {
         bodyParser : false

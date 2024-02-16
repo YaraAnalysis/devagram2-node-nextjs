@@ -50,6 +50,7 @@ const handler = nc()
         }
     });
 
+// mudar a configuração padrão do next para não exportar json nesta api.
 export const config = {
     api : {
         bodyParser : false
